@@ -7,13 +7,10 @@ UC Berkeley ([Berkeley Initiative for Transparency in the Social Sciences](http:
 ## Materials description
 ## Installation Instructions
 -------------------------------
-
 ### Agenda
 The software workshop is from 10a-12p in the David Brower Center in Berkeley, CA. The agenda for the rest of the workshop can be found [here](http://www.bitss.org/wp-content/uploads/2015/12/AM2016_Agenda-1.pdf).
 
 -------------------------
-
-
 ### Materials for the 2016 BITSS Annual Meeting Workshop
 
 The numbered files/directories will take you through the workshop in order.
@@ -21,13 +18,14 @@ The numbered files/directories will take you through the workshop in order.
 First, 1-Tools-Intro contains slides introducing software tools for reproducibility: specifically version control and dynamic documents.
 
 Second is a set of materials to learn dynamic documents in different languages:
->2-StataLaTeX shows a two-step method of combining Stata and LaTeX.
+* 2-StataLaTeX shows a two-step method of combining Stata and LaTeX.
 
->2-StataMarkdoc shows a one-step method in Stata using the markdoc add-on. It's still under development.
+* 2-StataMarkdoc shows a one-step method in Stata using the markdoc add-on. It's still under development.
 
->2-Rmarkdown shows a complete one-stop-shop of version-controlled one-click analysis and final paper in R Studio.
+* 2-Rmarkdown shows a complete one-stop-shop of version-controlled one-click analysis and final paper in R Studio.
 
-Third 3-GitDemo.md is a set of tasks to work through to learn Git & Github.
+Third, 3-GitDemo.md is a set of tasks to work through to learn Git & Github.
+
 -----------
 
 ## Installation Instructions
@@ -43,7 +41,7 @@ Learning LaTeX for document production is a pretty daunting task, but it's quite
 
 ##### Dynamic Documents in Stata
 
-First, Stata isn't free, but you can get a temporary copy for the workshop [here](https://umich.app.box.com/v/stata). If you have any trouble with that install, e-mail [ICPSR IT](icpsr-sp-techsupp@umich.edu).
+First, Stata isn't free. Sadly, we can't provide you with any sort of demo copy, but anyone with a UC Berkeley login can use it through [Citrix](http://citrix.berkeley.edu).
 
 Although far less well developed in Stata than in R, dynamic documents can be created using the Markdoc ado created by E.F. Haghish. To install, run the following commands in Stata:
 
