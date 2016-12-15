@@ -47,9 +47,9 @@
 % - Use the \inst command only if there are several affiliations.
 % - Keep it simple, no one is interested in your street address.
 
-\date[BITSS2014] % (optional, should be abbreviation of conference name)
-{ICPSR, July 2016\\
-Slides available online at \url{https://github.com/BITSS/ICPSR2016}}
+\date[BITSS2016] % (optional, should be abbreviation of conference name)
+{BITSS Annual Meeting 2016\\
+Slides available online at \url{https://github.com/BITSS/Annual2016}}
 % - Either use conference name or its abbreviation.
 % - Not really informative to the audience, more for people (including
 %   yourself) who are reading the slides online
@@ -83,7 +83,7 @@ Slides available online at \url{https://github.com/BITSS/ICPSR2016}}
 % If you wish to uncover everything in a step-wise fashion, uncomment
 % the following command: 
 
-\beamerdefaultoverlayspecification{<+->}
+\beamerdefaultoverlayspecification{<.->}
 
 
 \begin{document}
@@ -138,6 +138,31 @@ including yourself next week''
 \end{frame}
 \begin{frame}{Workflow}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Problems}
+\begin{frame}{Problems}
+ \begin{itemize}
+ \item Data not available
+ \item Code not available/unintelligible
+ \item Code and data cannot reproduce original results
+ \end{itemize}
+\end{frame}
+
+ 
+\subsection{Irreproducible Workflow}
+ \begin{frame}{Irreproducible Workflow}
+ \begin{itemize}
+ \item
+  Even with the help of the original author (yourself?), you can't get the data to reproduce the published results. Or you just can't find the data to begin with. 
+  \item \textit{Journal of Money, Credit, and Banking} Project. \href{http://www.jstor.org/stable/1806061}{(Dewald et al., AER 1986)}
+   \item Martin Feldstein on Social Security and private savings, Reinhart and Rogoff on debt and GDP growth.
+ \end{itemize} 
+ \end{frame}
+
+
+
+\section{Solutions}
  \begin{itemize}
  \item Version Control
  \item Dynamic Documents
@@ -211,6 +236,307 @@ OK, I'm convinced. How do I learn more?
 \item Software Carpentry's tutorials \href{http://www.software-carpentry.org/lessons}{\beamergotobutton{Link}}
 
 \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Reproducibility \& Transparency}
+\begin{itemize}
+\item \textbf{What are practical tools to implement reproducibility solutions?}
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Solutions}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Workflow}
+\begin{frame}{Reproducible Workflow}
+ \begin{itemize}
+ \item Literate Programing 
+ \item Version control
+ \begin{itemize}
+ \item \href{http://www.github.com}{Github}
+ \item \href{http://osf.io}{OSF}
+ \end{itemize}
+ \item Dynamic Documents
+ \begin{itemize}
+  \item R Markdown and \href{http://rstudio.com}{R Studio}
+  \item Ketchup in Stata
+ \end{itemize}
+ \item Data Sharing
+ \begin{itemize}
+ \item \href{http://www.thedata.org}{Harvard's Dataverse}
+ \end{itemize}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Literate Programming}
+\begin{frame}{Literate Programming}
+\begin{itemize}
+\item First, \textit{programming} is key to reproducibility. Working in Excel is not reproducible.
+\item See Reinhart and Rogoff ``Growth in a Time of Debt'' controversy: 
+\begin{itemize}
+	\item
+	Original Paper, \href{https://www.aeaweb.org/articles.php?doi=10.1257/aer.100.2.573}{\textit{AER P \& P} 2010}
+	\item 
+	\href{http://cje.oxfordjournals.org/content/38/2/257}{Herndon et. al (2013)} finding.
+	\item \href{http://www.newyorker.com/news/john-cassidy/the-reinhart-and-rogoff-controversy-a-summing-up}{\textit{New Yorker} summary}.
+\end{itemize}
+
+\item Random number generation in Excel--set seed with \href{http://www.statisticshowto.com/use-random-number-generator-excel/}{Data Analysis Toolpak}. 
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Literate Programming}
+\begin{itemize}
+\item  If you are using SPSS, use of `syntax' to record all the commands you run is simple. (See \href{http://www.ats.ucla.edu/stat/spss/seminars/spss_syntax/}{UCLA tutorial}.) Similarly in Stata, `commandlog'.
+
+\item Better is to write scripts. R, Stata, SAS, Python, or whatever you please.
+
+\item Open source has some advantages (being free, for one) but you're going to use what everyone in your field uses.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Literate Programming}
+\begin{itemize}
+\item
+Second, \textit{literate programming} is key to reproducibility. Write code to be read by a human being, with the code for the computer secondary.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Literate Programming}
+\begin{quote}
+``I believe that the time is ripe for significantly better documentation of programs, and that we can best achieve this by considering programs to be works of literature. Hence, my title: ``Literate Programming.''
+
+Let us change our traditional attitude to the construction of programs: Instead of imagining that our main task is to instruct a computer what to do, let us concentrate rather on explaining to human beings what we want a computer to do.
+\end{quote}
+(cont.)
+\end{frame}
+
+\begin{frame}{Literate Programming}
+\begin{quote}
+``The practitioner of literate programming can be regarded as an essayist, whose main concern is with exposition and excellence of style. Such an author, with thesaurus in hand, chooses the names of variables carefully and explains what each variable means. He or she strives for a program that is comprehensible because its concepts have been introduced in an order that is best for human understanding, using a mixture of formal and informal methods that reinforce each other.''
+\end{quote}
+--Donald Knuth \textit{The Computer Journal}, 1984
+\href{http://www.literateprogramming.com/index.html}{\beamerbutton{Quotes}}
+\href{http://comjnl.oxfordjournals.org/content/27/2/97.full.pdf+html}{\beamerbutton{Original}}
+\end{frame}
+
+\subsection{Workflow Suggestions}
+\begin{frame}{Organizing and Recording Workflow}
+\begin{quote}
+``Reproducibility is just collaboration with people you don't know,
+including yourself next week''
+\end{quote}
+\begin{flushright}
+---Philip Stark, UC Berkeley Statistics
+\end{flushright}
+\end{frame}
+
+\begin{frame}{Organizing and Recording Workflow}
+ Practical coding and organizational suggestions
+ \begin{itemize}
+ \item Long (2008) \textit{The Workflow of Data Analysis Using Stata}
+ \item Making any changes to a file that has been posted/shared means it gets a new name.
+ \item Use version commands to ensure others get same results.
+ \item Keep a daily research log.
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Version Control}
+\begin{frame}{Version Control}
+\begin{itemize}[<.->]
+\item
+Using version control (AKA revision control) can help to make your work more reproducible.
+
+\item
+What is version control?
+
+\begin{quote}
+Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later. For the examples in this book you will use software source code as the files being version controlled, though in reality you can do this with nearly any type of file on a computer.
+\end{quote}
+--Git, \href{https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control}{About Version Control}
+
+%\item Distributed Version Control Systems (DCVS) let multiple users control the same files in this manner.
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Version Control}
+With version control you can:
+\begin{itemize}
+\item Collaborate 
+\item Track who made every change
+\item Easily switch between versions of files
+\item Compare versions of files
+\item Backup
+\item Work with the same files on different machines
+\item Experiment with a new version of code without breaking things
+\end{itemize}
+\href{http://stackoverflow.com/questions/1408450/why-should-i-use-version-control}{\beamerbutton{Link1}}
+\href{http://tex.stackexchange.com/questions/1118/what-are-the-advantages-of-using-version-control-git-cvs-etc-in-latex-documen}{\beamerbutton{Link2}}
+\href{http://stackoverflow.com/questions/1408450/why-should-i-use-version-control}{\beamerbutton{Link3}}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Version Control}
+Places you're already using version control without knowing it:
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+{ % all template changes are local to this group.
+    \setbeamertemplate{navigation symbols}{}
+    \begin{frame}[plain]
+        \begin{tikzpicture}[remember picture,overlay]
+            \node[at=(current page.center)] {
+                \includegraphics[height=\paperheight]{../Images/googledocs.PNG}
+            };
+        \end{tikzpicture}
+     \end{frame}
+
+ \setbeamertemplate{navigation symbols}{}
+    \begin{frame}[plain]
+        \begin{tikzpicture}[remember picture,overlay]
+            \node[at=(current page.center)] {
+                \includegraphics[width=\paperwidth]{../Images/elephantswiki.PNG}
+            };
+        \end{tikzpicture}
+     \end{frame}
+}
+\begin{frame}{Version Control}
+Places you're already using version control without knowing it:
+\begin{itemize}
+	\item
+	Google Docs
+	\item
+	Wikipedia
+	\item
+	Every piece of software you use.
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Version Control}
+Isn't this just a complicated version of the ``date and initial'' method?
+\begin{itemize}
+\item regressions2015.08.24.do
+\item regressions2015.08.25.do
+\item regressions2015.08.25GC.do
+\item Hassle
+\item Confusion
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Version Control}
+\begin{quote}Here is a good rule of thumb: If you are trying to solve a problem, and there are multi-billion dollar  firms  whose  entire  business  model  depends  on  solving  the  same  problem,  and  there  are whole courses at your university devoted to how to solve that problem, you might want to figure out what the experts do and see if you can’t learn something from it.
+
+...
+
+Not one piece of commercial software you have on your PC, your phone, your tablet,
+your car, or any other modern computing device was written with the “date and initial” method.
+\end{quote}
+--Matthew Gentzkow and Jesse M. Shapiro ``\href{http://web.stanford.edu/~gentzkow/research/CodeAndData.pdf}{Code and Data for the Social Sciences: A Practitioner's Guide}''
+\end{frame}
+
+
+{ % all template changes are local to this group.
+    \setbeamertemplate{navigation symbols}{}
+    \begin{frame}[plain]
+        \begin{tikzpicture}[remember picture,overlay]
+            \node[at=(current page.center)] {
+                \includegraphics[height=\paperheight]{../Images/github-logo-transparent.jpg}
+            };
+        \end{tikzpicture}
+     \end{frame}
+     
+     \begin{frame}[plain]
+         \begin{tikzpicture}[remember picture,overlay]
+            \node[at=(current page.center)] {
+               \href{https://xkcd.com/1597/}{\includegraphics[height=\paperheight]{../Images/git.png}}
+            };
+        \end{tikzpicture}
+     \end{frame}
+
+    \begin{frame}[plain]
+        \begin{tikzpicture}[remember picture,overlay]
+            \node[at=(current page.center)] {
+                \includegraphics[height=\paperheight]{../Images/OSFnow.PNG}
+            };
+        \end{tikzpicture}
+     \end{frame}
+ 
+    \begin{frame}[plain]
+        \begin{tikzpicture}[remember picture,overlay]
+            \node[at=(current page.center)] {
+                \includegraphics[height=\paperheight]{../Images/OSFsoon.PNG}
+            };
+        \end{tikzpicture}
+     \end{frame}
+}
+%%%%%%%%%%%%%%%
+\begin{frame}{Examples}
+GitHub and OSF Examples:
+\begin{itemize}
+\item
+Slides for this workshop on Github.com
+\item \url{http://www.github.com/bitss/annual2016}
+\item
+Slides also available on the Open Science Framework
+ \item \url{https://osf.io/t3ttm/}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Dynamic Documents}
+\begin{frame}{Dynamic Documents}
+\begin{itemize}[<+->]
+\item
+Even if you write perfect (version controlled) code, you can still run into problems going from your code to paper. This is where \textit{dynamic documents} come in.
+\item
+A dynamic document includes your data, code, analysis, and output all in one place. Fully automated, you can guarantee no mistakes from copying and pasting.
+\item
+Do this with \href{http://rmarkdown.rstudio.com/}{R Markdown} in \href{https://www.rstudio.com/}{R Studio} or 
+\href{http://www.haghish.com/statistics/stata-blog/reproducible-research/markdoc.php}{Markdoc} in Stata.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Dynamic Documents}
+\begin{itemize}
+\item Include tables by linking to a file, instead of a static image.
+\item Include number by linking to a value calculated by an analysis file, instead of a static number typed manually.
+\item Automatically update tables and numbers.
+\item Produce entire paper with one or two clicks.
+\end{itemize} 
+\end{frame}
+
+
+\begin{frame}{Examples}
+\begin{itemize}
+\item
+Stata Example
+
+\item
+R Studio Example
+
+\end{itemize}
+\end{frame}
+
+
+\section{Conclusion}
+\begin{frame}{Conclusion}
+Simple tools exist to help you transparently and reproducibly take your research from beginning to end. 
+\begin {itemize}
+
+\item Version Control
+\item Open Science Framework
+\item Dynamic Documents
+\item Trusted Public Data Archive
+\end{itemize} 
+\vspace{0.25in}
+Read more in my \href{http://github.com/garretchristensen/manual}{\textit{Manual of Best Practices in Transparent Social Science Research}} on GitHub.
 \end{frame}
 
 
