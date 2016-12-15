@@ -5,7 +5,7 @@ clear all
 set more off 
 version 12.1
 //change this next line as necessary
-cd "C:\Users\garret\Box Sync\CEGA-Programs-BITSS\1_Events\3_Workshops-Seminars\ICPSR\ICPSR2016\6-StataLaTeX"
+cd "C:\Users\garret\Box Sync\CEGA-Programs-BITSS\1_Events\1_Annual_Meeting\2016_Annual_Meeting\Workshop\2-StataLaTeX"
 use WASHBpublic_mock.dta
 
 *Do I have the same data as I used to, or as my collaborator does?
@@ -47,7 +47,9 @@ end
 * NB: You could also do this in one step since you can write directly to a file.
 sysuse auto, clear
 *Create empty tex file to store new commands
-! echo > .\StataScalarList.tex
+*! echo > .\StataScalarList.tex
+! rm .\StataScalarList.tex
+! touch .\StataScalarList.tex
 * We want to mention the mean price in our paper 
 sum price 
 *Need to use full path to tex file because the stata working directory doesn't pass through the shell command 
