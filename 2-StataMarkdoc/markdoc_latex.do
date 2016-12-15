@@ -1,4 +1,4 @@
-	cd "C:\Users\garret\Box Sync\CEGA-Programs-BITSS\1_Events\3_Workshops-Seminars\ICPSR\ICPSR2016\6-StataMarkdoc" 
+	cd "C:\Users\garret\Box Sync\CEGA-Programs-BITSS\1_Events\1_Annual_Meeting\2016_Annual_Meeting\Workshop\2-StataMarkdoc" 
 	//change this for your computer
 	cap qui log c
 	set linesize 70
