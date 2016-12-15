@@ -1,6 +1,7 @@
 # 2016 BITSS Annual Meeting Software Workshop
 by [Garret Christensen](http://www.ocf.berkeley.edu/~garret),
 UC Berkeley ([Berkeley Initiative for Transparency in the Social Sciences](http://www.bitss.org) & [Berkeley Institute for Data Science](http://bids.berkeley.edu))
+and [Cory Belden](http://coryrbelden.weebly.com/), UC Davis
 
 ## Contents:
 ## Workshop Agenda
@@ -29,7 +30,7 @@ Third, 3-GitDemo.md is a set of tasks to work through to learn Git & Github.
 -----------
 
 ## Installation Instructions
-The workshop will introduce you to two major sets of tools that can help you make your workflow more reproducible: version control and dynamic documents. It will be helpful if you could install the following software programs before coming to the workshop, but I can assist you with it if you have issues, and most software should be installed on Michigan machines.
+The workshop will introduce you to two major sets of tools that can help you make your workflow more reproducible: version control and dynamic documents. It will be helpful if you could install the following software programs before coming to the workshop, but I can assist you with it if you have issues.
 
 
 ### 1. Dynamic Documents with Stata and  R/R Studio
